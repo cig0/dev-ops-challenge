@@ -84,13 +84,13 @@ Wait for it to complete and once it is done, go ahead with the next one:
 
 2. `aws cloudformation deploy --capabilities "CAPABILITY_IAM" --stack-name "service-app" --template-file service-app.yml`
 
-If everything went well, you should now have two CloudFormation stacks using named `fargate-app` and `service-app` respectively, denoting that one of the stacks creates the network and Fargate resources needed to host the app, and the other one being responsible for deploying the app as a service into Fargate.
+If everything went well, you should now have two CloudFormation stacks with the names `fargate-app` and `service-app` respectively, denoting that one of the stacks creates the network and Fargate resources needed to host the app, while the other one being responsible for deploying the app as a service into Fargate.
 
-The stacks are configured in a way you should access the application running at port 3000 in the private subnet, while being accesible through port 80.
+The stacks are configured in a way you can access the application running at port 3000 in the private subnet, while being accesible through port 80 from the internet.
 
-You can finde the domain name you need to use to reach the app, in the AWS console go to EC2 -> Load Balancing/Load Balancers and click on the public one, you should see an A registry similar to this one: `http://farga-publi-1v32razi4azpv-1734796021.us-east-1.elb.amazonaws.com/hello_world` (/hello_world)
+You can find the domain name you need to use to reach the app, in the AWS console go to EC2 -> Load Balancing/Load Balancers and click on the public one, you should see an A registry similar to this one: `http://farga-publi-1v32razi4azpv-1734796021.us-east-1.elb.amazonaws.com/hello_world` (/hello_world)
 
-Since the intetration with the RDS PostgreSQL service isn't finished, the query will throw an error.
+Since the integration with the RDS PostgreSQL service isn't finished, the query will throw an error.
 
 
 Ref:
