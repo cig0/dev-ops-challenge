@@ -88,7 +88,7 @@ If everything went well, you should now have two CloudFormation stacks with the 
 
 The stacks are configured in a way you can access the application running at port 3000 in the private subnet, while being accesible through port 80 from the internet.
 
-You can find the domain name you need to use to reach the app, in the AWS console go to EC2 -> Load Balancing/Load Balancers and click on the public one, you should see an A registry similar to this one: `http://farga-publi-1v32razi4azpv-1734796021.us-east-1.elb.amazonaws.com/hello_world` (/hello_world)
+To find the domain name you need to use to reach the app, in the AWS console go to EC2 -> Load Balancing/Load Balancers and click on the Public LB, you should see an A registry similar to this one: `http://farga-publi-1v32razi4azpv-1734796021.us-east-1.elb.amazonaws.com/
 
 Since the integration with the RDS PostgreSQL service isn't finished, the query will throw an error.
 
